@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+         version="3.1">
+    <enterprise-beans>
+        <session>
+            <ejb-name>InjServer</ejb-name>
+            <env-entry>
+                <env-entry-name>myNumber</env-entry-name>
+                <env-entry-type>java.lang.Integer</env-entry-type>
+                <env-entry-value>230</env-entry-value>
+            </env-entry>
+            <env-entry>
+                <env-entry-name>theName</env-entry-name>
+                <env-entry-type>java.lang.String</env-entry-type>
+                <env-entry-value>Spongebob</env-entry-value>
+                <injection-target>
+                    <injection-target-class>com.tobiascode.server.InjServer</injection-target-class>
+                    <injection-target-name>myName</injection-target-name>
+                </injection-target>
+            </env-entry>
+        </session>
+    </enterprise-beans>
+</ejb-jar>
