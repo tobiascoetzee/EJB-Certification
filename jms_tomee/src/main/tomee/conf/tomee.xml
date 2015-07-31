@@ -1,0 +1,12 @@
+<tomee>
+    <Resource id="JmsResourceAdapter" type="ActiveMQResourceAdapter">
+        BrokerXmlConfig =  broker:(tcp://localhost:61616)
+        ServerUrl       =  tcp://localhost:61616
+    </Resource>
+
+    <Resource id="DemoConnectionFactory" type="javax.jms.ConnectionFactory">
+        ResourceAdapter = JmsResourceAdapter
+    </Resource>
+
+    <Resource id="DemoQueue" type="javax.jms.Queue"/>
+</tomee>
